@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Why Open Source brings more value to business?</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      @font-face {
+        font-family: "Yanone Kaffeesatz";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Yanone Kaffeesatz Regular"),
+          local("YanoneKaffeesatz-Regular"),
+          url(YDAoLskQQ5MOAgvHUQCcLbvy90DtE_Pg_qiF9bHvTzw.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: "Ubuntu Mono";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Ubuntu Mono Regular"), local("UbuntuMono-Regular"),
+          url(ViZhet7Ak-LRXZMXzuAfkZ0EAVxt0G0biEntp43Qt6E.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: "Droid Serif";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Droid Serif Regular"), local("DroidSerif-Regular"),
+          url(0AKsP294HTD-nvJgucYTaJ0EAVxt0G0biEntp43Qt6E.ttf)
+            format("truetype");
+      }
+      body {
+        font-family: "Droid Serif";
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Yanone Kaffeesatz";
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .remark-slide-content {
+        background-image: url(blue-skies.jpg);
+        background-size: cover;
+      }
+      .remark-slide-content h1 {
+        font-size: 3em;
+      }
+      .remark-slide-content h2 {
+        font-size: 2em;
+      }
+      .remark-slide-content h3 {
+        font-size: 1.6em;
+      }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p {
+        line-height: 1.25em;
+      }
+      .red {
+        color: #fa0000;
+      }
+      .large {
+        font-size: 2em;
+      }
+      a,
+      a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 5px;
+        -web-border-radius: 5px;
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code,
+      .remark-inline-code {
+        font-family: "Ubuntu Mono";
+      }
+      .remark-code-line-highlighted {
+        background-color: #373832;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1,
+      .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top: 151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first,
+      #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+      /* Two-column layout */
+      .puppetlogo img {
+        width: 95%;
+      }
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+      .left-column h2:last-of-type,
+      .left-column h3:last-child {
+        color: #000;
+      }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+      .right-column .something img {
+        width: 100%;
+        height: 550px;
+      }
+      .right-column .smallimg img {
+        width: 90%;
+      }
+      .right-column .nowidth img {
+        width: auto;
+      }
+      .right-column-center {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+        text-align: center;
+      }
+      .right-column img {
+        width: 100%;
+      }
+      @page {
+        size: 1024px 786px;
+        margin: 0;
+      }
+      @media print {
+        .remark-slide-scaler {
+          width: 100% !important;
+          height: 100% !important;
+          transform: scale(1) !important;
+          top: 0 !important;
+          left: 0 !important;
+          size: 1920px 1080px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, inverse
+
+# Why Open Source brings more value to business?
+
+## Or why you should publish your Puppet modules
+
+???
+
+---
+
+## $ whoami
+<img src="bastelfreak2.jpg" alt="drawing" style="float: right;width: 400px;"/>
+
+* Tim 'bastelfreak' Meusel
+
+* Puppet Contributor since 2012
+
+* Merging stuff on [Vox Pupuli](https://voxpupuli.org/) (Puppet Community) since 2015
+
+* Vox Pupuli Project Management Committee member
+
+* Senior IT Automation Consultant at [example42](https://example42.com/)
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+???
+
+*
+
+---
+
+class: center, middle, inverse
+
+# What's this Vox Pupuli thingy?
+
+???
+
+* lets have a look on the daily tasks a maintainer can do to keep modules in shape
+
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Maintain many many Puppet modules
+
+]
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* 150 Puppet modules
+* 43 Ruby Gems
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Maintain many many Puppet modules
+
+* Be helpful and polite to each other
+
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Maintain many many Puppet modules
+
+* Be helpful and polite to each other
+
+* Be open-minded to people and technology
+
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Maintain many many Puppet modules
+
+* Be helpful and polite to each other
+
+* Be open-minded to people and technology
+
+* Provide a home for orphaned Puppet modules
+
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Maintain many many Puppet modules
+
+* Be helpful and polite to each other
+
+* Be open-minded to people and technology
+
+* Provide a home for orphaned Puppet modules
+
+* Unite lonely module and tooling authors to a collective
+
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Maintain many many Puppet modules
+
+* Be helpful and polite to each other
+
+* Be open-minded to people and technology
+
+* Provide a home for orphaned Puppet modules
+
+* Unite lonely module and tooling authors to a collective
+
+* Ensure continued development for our code
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Vox Pupuli
+### Who?
+]
+
+.right-column[
+* Amount of Vox Pupuli members with merge permissions
+
+![img](contributors.svg)
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* 161 members in the GitHub org with merge access
+
+---
+class: center, middle, inverse
+
+# How to design a good Puppet module?
+
+???
+
+---
+
+.left-column[
+## Module Design
+### Status Quo
+]
+
+.right-column[
+
+* You write your own component Puppet modules
+
+* You also want to reuse Open Source component modules from others
+
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* a component module manages a component of the infrastructure
+* a specific software
+* like nginx or mysql
+---
+.left-column[
+## Module Design
+### Status Quo
+]
+
+.right-column[
+
+* You write your own component Puppet modules
+
+* You also want to reuse Open Source component modules from others
+
+* Many of your servers are very similar, but not identical
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* all servers use your internal DNS resolver in /etc/resolv.conf
+* except for the DNS server itself, which forwards to cloudflare
+
+---
+.left-column[
+## Module Design
+### Status Quo
+]
+
+.right-column[
+
+* You write your own component Puppet modules
+
+* You also want to reuse Open Source component modules from others
+
+* Many of your servers are very similar, but not identical
+
+* Design requirement 1: Use internal and external component modules in parallel
+
+* Design requirement 2: Assign those component modules to groups of servers
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+
+---
+.left-column[
+## Module Design
+### Status Quo
+### Roles & Profiles
+]
+
+.right-column[
+.nowidth[![imagefoo](rapwoh.svg)]
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+
+.left-column[
+## Module Design
+### Status Quo
+### Roles & Profiles
+### Data vs Code
+]
+
+.right-column[
+* People that write Puppet Code might not provide the data
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Module Design
+### Status Quo
+### Roles & Profiles
+### Data vs Code
+]
+
+.right-column[
+* People that write Puppet Code might not provide the data
+
+* System administrators team A write Puppet code
+
+* System administrators from team B provide ip addresses
+
+* Product owner provide version numbers
+
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Module Design
+### Status Quo
+### Roles & Profiles
+### Data vs Code
+]
+
+.right-column[
+* People that write Puppet Code might not provide the data
+
+* System administrators team A write Puppet code
+
+* System administrators from team B provide ip addresses
+
+* Product owner provide version numbers
+
+* Secrets should come from a secret store like Hashicorp Vault
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Module Design
+### Status Quo
+### Roles & Profiles
+### Data vs Code
+]
+
+.right-column[
+* People that write Puppet Code might not provide the data
+
+* System administrators team A write Puppet code
+
+* System administrators from team B provide ip addresses
+
+* Product owner provide version numbers
+
+* Secrets should come from a secret store like Hashicorp Vault
+
+* Design requirement 3: Separate data and code
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Module Design
+### Status Quo
+### Roles & Profiles
+### Data vs Code
+]
+
+.right-column[
+.nowidth[![imagefoo](rap.svg)]
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Module Design
+### Status Quo
+### Roles & Profiles
+### Data vs Code
+]
+
+.right-column[
+* It's hard for enforce code design/architecture with CI jobs
+
+* You might leak private information if you publish an existing internal module
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Why Open Sourcing?
+### Technical aspects
+]
+
+.right-column[
+* Publish a module from the beginning
+
+* This enforces a proper structure in your code
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Why Open Sourcing?
+### Technical aspects
+]
+
+.right-column[
+* Publish a module from the beginning
+
+* This enforces a proper structure in your code
+
+* This ensures secrets are never added to it
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Why Open Sourcing?
+### Technical aspects
+]
+
+.right-column[
+* Publish a module from the beginning
+
+* This enforces a proper structure in your code
+
+* This ensures secrets are never added to it
+
+* Many companies still don't have internal CI
+
+  * There are free CI services for open source software!
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Why Open Sourcing?
+### Technical aspects
+### Vox Pupuli
+]
+
+.right-column[
+Vox Pupuli sales pitch:
+
+* Vox Pupuli has proper tooling to handle many modules
+
+* Vox Pupuli maintains community guidelines and best practices
+
+* Working in a collective enforces proper documentation and git commits
+
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* It's important to document code (changes) properly
+* new hires need to understand it
+* this gets tricky if documentation is reviewed by a small group of people that work with you on a daily basis
+* people that don't contribute to open source often have issue explaining code changes properly in git commits
+---
+.left-column[
+## Why Open Sourcing?
+### Technical aspects
+### Company advantages
+]
+
+.right-column[
+
+* Companies that do open source work are recognized in the community
+
+  * Attract new hires through open source work
+
+* Benefit from the knowledge and contributions within the community
+
+* Benefit from the tooling within the community
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+
+class: center, middle, inverse
+
+# Conclusion
+
+
+???
+
+---
+
+
+.left-column[
+## Conclusion
+]
+
+.right-column[
+
+* You should publish your internal puppet modules
+
+* Vox Pupuli is awesome, please contribute!
+
+* We've great tooling to scale module handling
+
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* We've some open issues with collected ideas. We need feedback!
+---
+
+.left-column[
+## Conclusion
+]
+
+.right-column[
+
+* You should publish your internal puppet modules
+
+* Vox Pupuli is awesome, please contribute!
+
+* We've great tooling to scale module handling
+
+* For feedback: `bastelfreak` on slack or [tim@bastelfreak.de](mailto:tim@bastelfreak.de)
+
+### Thanks for your attention!
+]
+
+<a href='https://example42.com' alt='company website example42'><img src="logo-540x540-3.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* We've some open issues with collected ideas. We need feedback!
+    </textarea>
+    <script src="remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({
+        // Set the slideshow display ratio
+        // Default: '4:3'
+        // Alternatives: '16:9', ...
+        ratio: "16:9",
+        highlightStyle: "github"
+      });
+    </script>
+  </body>
+</html>
