@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Why Open Source brings more value to business?</title>
+    <title>Why Open Source brings more value to businesses?</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style type="text/css">
       @font-face {
@@ -109,19 +109,36 @@
         font-size: 0.9em;
         padding: 15px;
       }
-      .inverse {
+      .inverse, .inversedoubleheading {
         background: #09194F;
-        background-image: url(dots.png);
+        background-image: url(dots.png), url(BD_Wortmarke_weiss.png), url(circle.png);
         background-repeat: no-repeat;
-        background-position: top 12px left 20px;
-        background-size: 40%;
+        background-position: top 12px left 20px, top 12px right 20px, center center;
+        background-size: 30%, 10%, 50%;
         color: #777872;
         text-shadow: 0 0 20px #333;
       }
       .inverse h1,
-      .inverse h2 {
+      .inverse h2,
+      .inversedoubleheading h1,
+      .inversedoubleheading h2 {
         color: #f3f3f3;
+      }
+      .inverse h2 {
         line-height: 0.8em;
+        margin-top: 0.8em;
+      }
+      .inverse h1 {
+        margin-top: 0em;
+        line-height: 1.1em;
+      }
+      .inversedoubleheading h1 {
+        margin-top: -1em;
+        line-height: 1.1em;
+      }
+      .inversedoubleheading h2 {
+        line-height: 0.8em;
+        margin-top: 0.8em;
       }
       /* Slide-specific styling */
       #slide-inverse .footnote {
@@ -217,18 +234,14 @@
 
 class: center, middle, inverse
 
-<img src="BD_Wortmarke_weiss.png" alt="dots" style="position: fixed; top: 12px; right: 20px; width: 10%;"/>
-
-# Why Open Source brings more value to business?
+# Why Open Source brings<br/> more value to businesses?
 
 ???
 
 ---
-class: center, middle, inverse
+class: center, middle, inversedoubleheading
 
-<img src="BD_Wortmarke_weiss.png" alt="dots" style="position: fixed; top: 12px; right: 20px; width: 10%;"/>
-
-# Why Open Source brings more value to business?
+# Why Open Source brings<br/> more value to businesses?
 
 ## Or why you should publish your Puppet modules
 
@@ -415,7 +428,7 @@ class: center, middle, inverse
 ---
 class: center, middle, inverse
 
-# How to design a good Puppet module?
+# How to design<br/> a good Puppet module?
 
 ???
 
