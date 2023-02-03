@@ -1,4 +1,4 @@
-# Why Open Source brings more value to business?
+# Why Open Source brings more value to businesses?
 
 ## Or why you should publish your Puppet modules
 
