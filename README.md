@@ -9,7 +9,7 @@ is.
 
 
 * You can find the online version here: [bastelfreak.de/cfgmgmtcamp2023](https://bastelfreak.de/cfgmgmtcamp2023/#1)
-* And the pdf here: [Tim_Meusel_-_Why_Open_Source_brings_more_value_to_business.pdf](https://bastelfreak.de/puppetize2021/Tim_Meusel_-_Why_Open_Source_brings_more_value_to_business.pdf)
+* And the pdf here: [What_Open_Source_can_do_for_your_business.pdf](https://bastelfreak.de/cfgmgmtcamp2023/What_Open_Source_can_do_for_your_business.pdf)
 * Online schedule: https://cfp.cfgmgmtcamp.org/2023/talk/EJQEWR/
 
 * You can find more talks from bastelfreak in his [repository](https://github.com/bastelfreak/talks) (he is also available for Puppet consulting)
