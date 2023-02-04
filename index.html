@@ -264,7 +264,7 @@ class: center, middle, inversedoubleheading
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
 ???
 
-*
+* who has seen this picture before because I reviewed/merged your pull request?
 
 ---
 
@@ -296,6 +296,8 @@ class: center, middle, inverse
 * 43 Ruby Gems in 2021, 54 *active* gems at the moment
 ---
 
+count: false
+
 .left-column[
 ## Vox Pupuli
 ### What?
@@ -316,6 +318,9 @@ class: center, middle, inverse
 * We've a code of conductat least since 2016 and had a single violation
 
 ---
+
+count: false
+
 .left-column[
 ## Vox Pupuli
 ### What?
@@ -336,6 +341,9 @@ class: center, middle, inverse
 ???
 
 ---
+
+count: false
+
 .left-column[
 ## Vox Pupuli
 ### What?
@@ -358,6 +366,9 @@ class: center, middle, inverse
 ???
 
 ---
+
+count: false
+
 .left-column[
 ## Vox Pupuli
 ### What?
@@ -423,14 +434,129 @@ class: center, middle, inverse
 
 ???
 
-* 161 members in the GitHub org with merge access
+* 2021: 161 members in the GitHub org with merge access
+* now: 186
 
+---
+
+.left-column[
+## Vox Pupuli
+### Who?
+]
+
+.right-column[
+* Many git newbies
+
+ *  Rebasing a feature branch against upstream master is hard
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### Who?
+]
+
+.right-column[
+* Many git newbies
+
+ *  Rebasing a feature branch against upstream master is hard
+
+* Many newcomers to test frameworks
+
+  * Interested in learing RuboCop/puppet-lint/rspec-puppet/serverspec
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* Those are the tools we use in our CI
+* talk about them later
+* CI runs automatically
+* CI does code annotations
+* People want to fix/enhance their code because CI feedback is quick and nice
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### Who?
+]
+
+.right-column[
+* Many git newbies
+
+ *  Rebasing a feature branch against upstream master is hard
+
+* Many newcomers to test frameworks
+
+  * Interested in learing RuboCop/puppet-lint/rspec-puppet/serverspec
+
+* DevOps/Platform Engineers in a small/tiny team
+
+  * Use Puppet at work and want to use public modules
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### Who?
+]
+
+.right-column[
+* Many git newbies
+
+ *  Rebasing a feature branch against upstream master is hard
+
+* Many newcomers to test frameworks
+
+  * Interested in learing RuboCop/puppet-lint/rspec-puppet/serverspec
+
+* DevOps/Platform Engineers in a small/tiny team
+
+  * Use Puppet at work and want to use public modules
+
+* Consultants that contribute to one/a few modules for a period of time
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* We provide letter of recognitions or kinda an employment reference
 ---
 class: center, middle, inverse
 
 # How to design<br/> a good Puppet module?
 
 ???
+
+* who wrote open source software that's public on the internet?
+
+* Who wrote a puppet module (no matter public/private)?
+
+* Who published it to forge.puppet.com?
+
+* Anybody not using Puppet?
 
 ---
 
@@ -443,7 +569,7 @@ class: center, middle, inverse
 
 * You write your own component Puppet modules
 
-* You also want to reuse Open Source component modules from others
+  * A module that manages a single component (Apache *or* nginx)
 
 ]
 
@@ -456,6 +582,10 @@ class: center, middle, inverse
 * a specific software
 * like nginx or mysql
 ---
+
+
+count: false
+
 .left-column[
 ## Module Design
 ### Status Quo
@@ -465,7 +595,41 @@ class: center, middle, inverse
 
 * You write your own component Puppet modules
 
+  * A module that manages a single component (Apache *or* nginx)
+
 * You also want to reuse Open Source component modules from others
+
+  * Because there are already awesome modules for nginx
+
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* reinventing the wheel is bad
+* using an existing module saves times
+* saving time saves money
+* VPs like saving money
+
+---
+count: false
+
+.left-column[
+## Module Design
+### Status Quo
+]
+
+.right-column[
+
+* You write your own component Puppet modules
+
+  * A module that manages a single component (Apache *or* nginx)
+
+* You also want to reuse Open Source component modules from others
+
+  * Because there are already awesome modules for nginx
 
 * Many of your servers are very similar, but not identical
 ]
@@ -479,6 +643,9 @@ class: center, middle, inverse
 * except for the DNS server itself, which forwards to cloudflare
 
 ---
+
+count: false
+
 .left-column[
 ## Module Design
 ### Status Quo
@@ -488,7 +655,11 @@ class: center, middle, inverse
 
 * You write your own component Puppet modules
 
+  * A module that manages a single component (Apache *or* nginx)
+
 * You also want to reuse Open Source component modules from others
+
+  * Because there are already awesome modules for nginx
 
 * Many of your servers are very similar, but not identical
 
@@ -519,6 +690,9 @@ class: center, middle, inverse
 
 ???
 
+* Who knows this pattern?
+
+* Who uses it?
 ---
 
 .left-column[
@@ -548,11 +722,13 @@ class: center, middle, inverse
 .right-column[
 * People that write Puppet Code might not provide the data
 
-* System administrators team A write Puppet code
+* DevOps people want to use an external component module
 
-* System administrators from team B provide ip addresses
+* platform engineers write Puppet code
 
-* Product owner provides version numbers
+* network engineers provide ip addresses and firewall rules
+
+* Product owner provides version numbers for deployments
 
 ]
 
@@ -570,15 +746,18 @@ class: center, middle, inverse
 ]
 
 .right-column[
+
 * People that write Puppet Code might not provide the data
 
-* System administrators team A write Puppet code
+* DevOps people want to use an external component module
 
-* System administrators from team B provide ip addresses
+* platform engineers write Puppet code
 
-* Product owner provides version numbers
+* network engineers provide ip addresses and firewall rules
 
-* Secrets should come from a secret store like Hashicorp Vault
+* Product owner provides version numbers for deployments
+
+* Secrets should come from a secret store like Hashicorp Vault or hiera-eyaml
 ]
 
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
@@ -595,15 +774,18 @@ class: center, middle, inverse
 ]
 
 .right-column[
+
 * People that write Puppet Code might not provide the data
 
-* System administrators team A write Puppet code
+* DevOps people want to use an external component module
 
-* System administrators from team B provide ip addresses
+* platform engineers write Puppet code
 
-* Product owner provides version numbers
+* network engineers provide ip addresses and firewall rules
 
-* Secrets should come from a secret store like Hashicorp Vault
+* Product owner provides version numbers for deployments
+
+* Secrets should come from a secret store like Hashicorp Vault or hiera-eyaml
 
 * Design requirement 3: Separate data and code
 ]
@@ -630,6 +812,7 @@ class: center, middle, inverse
 
 ???
 
+* who knows hiera-eyaml
 ---
 .left-column[
 ## Module Design
