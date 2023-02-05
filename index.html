@@ -274,7 +274,6 @@ class: center, middle, inverse
 
 ???
 
-* lets have a look on the daily tasks a maintainer can do to keep modules in shape
 
 ---
 
@@ -306,6 +305,28 @@ count: false
 .right-column[
 * Maintain many many Puppet modules
 
+  * And Rubygems!
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* 150 Puppet modules in 2021. 175 *active* modules at the moment
+* 43 Ruby Gems in 2021, 54 *active* gems at the moment
+---
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Maintain many many Puppet modules
+
+  * And Rubygems!
+
 * Be helpful and polite to each other
 
 ]
@@ -315,7 +336,9 @@ count: false
 
 ???
 
-* We've a code of conductat least since 2016 and had a single violation
+* We've a code of conduct at least since 2016 and had a single violation
+
+* A person wasn't polite to a few others
 
 ---
 
@@ -328,6 +351,8 @@ count: false
 
 .right-column[
 * Maintain many many Puppet modules
+
+  * And Rubygems!
 
 * Be helpful and polite to each other
 
@@ -351,6 +376,8 @@ count: false
 
 .right-column[
 * Maintain many many Puppet modules
+
+  * And Rubygems!
 
 * Be helpful and polite to each other
 
@@ -376,6 +403,8 @@ count: false
 
 .right-column[
 * Maintain many many Puppet modules
+
+  * And Rubygems!
 
 * Be helpful and polite to each other
 
@@ -400,6 +429,8 @@ count: false
 
 .right-column[
 * Maintain many many Puppet modules
+
+  * And Rubygems!
 
 * Be helpful and polite to each other
 
@@ -511,6 +542,8 @@ count: false
 .footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
 
 ???
+
+* a team so tiny, often a single person
 
 ---
 
@@ -908,7 +941,7 @@ count: false
 
   * There are free CI services for open source software!
 
-* Main to create a successfull open source project
+* Aim to create a successfull open source project
 ]
 
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
@@ -935,7 +968,7 @@ count: false
 
   * There are free CI services for open source software!
 
-* Main to create a successfull open source project
+* Aim to create a successfull open source project
 
   * Success is often measured by the amount of users
 
@@ -948,7 +981,7 @@ count: false
 
 * You can track github stars or downloads, as a rough metric
 * this is far away from perfect, but it's something
-* plot that in your office to the wall
+* print that in your office to the wall
 * or review it during your scrum retro meetings
 * remember the vox pupuli user counter earlier
   * of course I love the growth
@@ -971,7 +1004,7 @@ count: false
 
   * There are free CI services for open source software!
 
-* Main to create a successfull open source project
+* Aim to create a successfull open source project
 
   * Success is often measured by the amount of users
 
@@ -1058,21 +1091,122 @@ Vox Pupuli sales pitch:
 * new hires need to understand it
 * this gets tricky if documentation is reviewed by a small group of people that work with you on a daily basis
 * people that don't contribute to open source often have issue explaining code changes properly in git commits
+
 ---
 .left-column[
 ## Why Open Sourcing?
 ### Technical aspects
 ### Vox Pupuli
-### Company advantages
 ]
 
 .right-column[
+* Our CI Setup
 
-* Companies that do open source work are recognized in the community
+* Validate code -> Lint Code -> Generate CI Matrix
 
-  * Attract new hires through open source work
+]
 
-    * That's how I got to betadots!
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* We validate the code to check for syntax errors
+* All metadata.json, custom Ruby, Puppet files
+* RuboCop/Puppet-lint to ensure a best practice code style
+* generate CI matrix
+
+---
+
+count: false
+
+.left-column[
+## Why Open Sourcing?
+### Technical aspects
+### Vox Pupuli
+]
+
+.right-column[
+* Our CI Setup
+
+* Validate code -> Lint Code -> Generate CI Matrix
+
+* `jq .requirements[0] metadata.json`
+```json
+{
+  "name": "puppet",
+  "version_requirement": ">= 6.1.0 < 8.0.0"
+}
+```
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* Identify major supported puppet version, 6 and 7 here
+* Generate unit test matrix with rspec-puppet
+---
+
+count: false
+
+.left-column[
+## Why Open Sourcing?
+### Technical aspects
+### Vox Pupuli
+]
+
+.right-column[
+* Our CI Setup
+
+* Validate code -> Lint Code -> Generate CI Matrix
+
+* `jq .requirements[0] metadata.json`
+```json
+{
+    "name": "puppet",
+    "version_requirement": ">= 6.1.0 < 8.0.0"
+}
+```
+
+* `jq .operatingsystem_support metadata.json`
+```json
+{
+  "operatingsystem": "RedHat",
+  "operatingsystemrelease": [
+    "6",
+    "7"
+  ]
+}
+```
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* generate a beaker job for each OS/Puppet version
+* mock facts for each OS in rspec-puppet
+
+---
+
+.left-column[
+## Why Open Sourcing?
+### Technical aspects
+### Vox Pupuli
+]
+
+.right-column[
+* Our CI Setup Documentation
+
+* CI Matrix generation: <a href="https://github.com/voxpupuli/puppet_metadata">github.com/voxpupuli/puppet_metadata</a>
+
+* unit testing with rspec-puppet: <a href="https://github.com/voxpupuli/voxpupuli-test">github.com/voxpupuli/voxpupuli-test</a>
+
+* acceptance testing with beaker: <a href="https://github.com/voxpupuli/voxpupuli/acceptance">github.com/voxpupuli/voxpupuli-acceptance</a>
+
+* Shard GitHub Action: <a href="https://github.com/voxpupuli/gha-puppet"> github.com/voxpupuli/gha-puppet</a>
 ]
 
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
@@ -1094,7 +1228,29 @@ Vox Pupuli sales pitch:
 
   * Attract new hires through open source work
 
-    * That's how I got to betadots!
+  * That's how I got to betadots!
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Why Open Sourcing?
+### Technical aspects
+### Vox Pupuli
+### Company advantages
+]
+
+.right-column[
+
+* Companies that do open source work are recognized in the community
+
+  * Attract new hires through open source work
+
+  * That's how I got to betadots!
 
 * Benefit from the knowledge and contributions within the community
 
@@ -1162,7 +1318,7 @@ class: center, middle, inverse
 
 ???
 
-* We've some open issues with collected ideas. We need feedback!
+* Need help with opensourcing your puppet modules or rubygems or CI setup? Let us know
 ---
 
 .left-column[
@@ -1177,7 +1333,7 @@ class: center, middle, inverse
 
 * We've great tooling to scale module handling
 
-* For feedback: `bastelfreak` on slack/IRC or [tim@bastelfreak.de](mailto:tim@bastelfreak.de)
+* For feedback: `bastelfreak` on <a href="https://slack.puppet.com/">slack.puppet.com</a>/Libera.Chat IRC or [tim@bastelfreak.de](mailto:tim@bastelfreak.de)
 
 * This talk and previous ones: <a href='https://github.com/bastelfreak/talks'>github.com/bastelfreak/talks</a>
 
@@ -1189,7 +1345,21 @@ class: center, middle, inverse
 
 ???
 
-* We've some open issues with collected ideas. We need feedback!
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+]
+
+.right-column[
+<img src="car.jpg" style="width:855%;">
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
     </textarea>
     <script src="remark-latest.min.js"></script>
     <script>
